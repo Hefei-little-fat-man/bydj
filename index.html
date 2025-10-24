@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合肥白蚁防治登记系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwN2JmZiI+PHBhdGggZD0iTTEwLDE3SDZ2LTJoNHYyek0xNywxM0g2di0yaDExVjEzeiBNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQTEwLDEwIDAgMCwwIDEyLDJ6Ii8+PC9zdmc+" alt="政务图标">
+            <h1>合肥白蚁防治登记系统</h1>
+            <p>合肥市区信息登记</p>
+        </header>
+
+        <main class="main">
+            <form id="registrationForm" class="form">
+                <div class="form-group">
+                    <label for="region">区域</label>
+                    <select id="region" required>
+                        <option value="">请选择区域</option>
+                        <option value="瑶海区">瑶海区</option>
+                        <option value="庐阳区">庐阳区</option>
+                        <option value="蜀山区">蜀山区</option>
+                        <option value="包河区">包河区</option>
+                        <option value="肥东县">高新区</option>
+                        <option value="肥西县">经开区</option>
+                        <option value="长丰县">政务区</option>
+                        <option value="庐江县">滨湖区</option>
+                        <option value="巢湖市">新站区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="road">道路</label>
+                    <input type="text" id="road" placeholder="请输入道路名称" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="community">小区名称</label>
+                    <input type="text" id="community" placeholder="请输入小区名称" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" placeholder="请输入姓名" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">联系电话</label>
+                    <input type="tel" id="phone" placeholder="请输入联系电话" required>
+                </div>
+				<!-- 在电话字段后面添加危害部位字段 -->
+				<div class="form-group">
+				    <label for="damage_part">危害部位</label>
+				    <select id="damage_part" required>
+				        <option value="">请选择危害部位</option>
+				        <option value="园林">园林</option>
+				        <option value="室内">室内</option>
+				    </select>
+				</div>
+
+                <button type="submit" class="submit-btn">提交登记</button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </main>
+
+        <footer class="footer">
+            <p>政务服务便民热线：0551-62642674</p>
+        </footer>
+    </div>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
